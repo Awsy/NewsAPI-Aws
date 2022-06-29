@@ -4,7 +4,7 @@ import Foundation
 
 
 struct NewsList: Codable {
-    let articles: [Article]
+    var articles: [Article]
 }
 
 struct Article: Codable {
@@ -15,12 +15,12 @@ struct Article: Codable {
     let description: String?
     let url: URL?
     let urlToImage: URL?
-    let publishedAt: Date
-    
-    struct Source: Codable {
-        let id: String?
-        let name: String?
-    }
+    let publishedAt: String?
     
     
+}
+
+struct Source: Codable {
+    let id: String?
+    let name: String?
 }
